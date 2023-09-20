@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Bixer/CSS/stylesReg.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+        <h3>Porfavor, ingresa tu datos </h3>
+        <form action="procesar_login.php" method="POST">
+
+            <div class="form-group">
+                <label for="nombre"></label>
+                <input type="text" placeholder="Nombre"   id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos"></label>
+                <input type="text" placeholder="Apellidos"   id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo"></label>
+                <input type="text" placeholder="Correo electronico"   id="correo" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contrasena"></label>
+                <input type="password" placeholder="Contraseña" id="contrasena" name="contrasena" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confircontrasena"></label>
+                <input type="password" placeholder="Confirmar contraseña" id="confircontrasena" name="confircontrasena" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono"></label>
+                <input type="password" placeholder="Telefono" id="telefono" name="telefono" required>
+            </div>
+            
+           
+            <button class="btn">Registrar</button>
+        </form>
+        
+        <img class="ImgLogo" src="Bixer/IMG/BixerLogo.png" alt="">
+    </div>
+</body>
+</html>
