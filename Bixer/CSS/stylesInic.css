@@ -4,28 +4,9 @@ body {
     background-color: #01010f;
 }
 
-.container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 50px;
-    background-color: #535353;
-    border-radius: 35px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-}
-
 h2 {
     text-align: center;
     font-size: 35px;
-}
-
-h3 {
-    text-align: center;
-    font-size: 15px;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 label {
@@ -33,18 +14,11 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"] {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 3px;
-    background: #BFBFBF;
-    
-}
+
 
 .btn {
-    display: block;
+    display: flex;
+    flex-direction: row;
     width: 50%;
     height: 50px;
     padding: 10px;
