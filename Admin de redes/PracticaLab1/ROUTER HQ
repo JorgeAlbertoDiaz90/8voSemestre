@@ -1,0 +1,134 @@
+SHOW RUN
+Building configuration...
+
+
+Current configuration : 1347 bytes
+!
+! Last configuration change at 00:23:48 UTC Sat Jan 1 2000
+!
+version 15.0
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname HQ
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+!
+!
+!
+!
+dot11 syslog
+ip source-route
+ --More--         !
+!
+ip cef
+!
+!
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+voice-card 0
+!
+!
+!
+!
+ --More--         !
+license udi pid CISCO2811 sn FTX1148A01D
+!
+redundancy
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1
+ ip address 209.165.202.129 255.255.255.252
+ !
+!
+interface FastEthernet0/0
+ ip address 10.10.0.1 255.255.252.0
+ duplex auto
+ speed auto
+ !
+ --More--         !
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+ !
+!
+interface Serial0/0/0
+ ip address 172.16.7.1 255.255.255.252
+ no fair-queue
+ !
+!
+interface Serial0/0/1
+ ip address 172.16.7.5 255.255.255.252
+ clock rate 125000
+ !
+!
+router ospf 1
+ log-adjacency-changes
+ passive-interface FastEthernet0/0
+ passive-interface Loopback1
+ network 10.10.0.0 0.0.7.255 area 0
+ --More--          network 172.16.7.0 0.0.0.3 area 0
+ network 172.16.7.4 0.0.0.3 area 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+ip route 0.0.0.0 0.0.0.0 Loopback1
+!
+!
+!
+!
+!
+!
+!
+control-plane
+ !
+!
+!
+!
+!
+!
+ --More--         !
+!
+!
+gatekeeper
+ shutdown
+!
+!
+line con 0
+line aux 0
+line vty 0 4
+ login
+!
+scheduler allocate 20000 1000
+end
+
+HQ#
